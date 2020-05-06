@@ -1,0 +1,256 @@
+.container{
+    width: 600px;
+    margin: 0 auto;
+    background-image: url(../img/p0307_m.jpeg);
+    background-repeat: repeat-y;
+    background-size: 100%;
+    border-radius: 10px;
+    font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック",sans-serif;
+    color: #333333;
+}
+
+.title-wrap{
+    display: flex;
+    justify-content: center;
+}
+
+.title{
+    font-size: 24px;
+    font-weight: border;
+    margin: 22px;
+}
+
+/*タブ切り替え全体のスタイル*/
+.tabs {
+  margin-top: 50px;
+  padding-bottom: 40px;
+  background-color: rgba(255,255,255,0);
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*タブのスタイル*/
+.tab_item {
+  width: calc(100%/2);
+  height: 24px;
+  font-size: 16px;
+  text-align: center;
+  display: block;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 7px;
+}
+.tab_item:hover {
+  opacity: 0.75;
+}
+
+/*ラジオボタンを全て消す*/
+input[name="tab_item"] {
+  display: none;
+}
+
+/*タブ切り替えの中身のスタイル*/
+.tab_content {
+  display: none;
+  padding: 0px 40px 0;
+  clear: both;
+  overflow: hidden;
+}
+
+
+/*選択されているタブのコンテンツのみを表示*/
+#all:checked ~ #all_content,
+#programming:checked ~ #programming_content,
+#design:checked ~ #design_content {
+  display: block;
+}
+
+/*選択されているタブのスタイルを変える*/
+.tabs input:checked + .tab_item {
+    background-color: rgba(255,255,0,1.0);
+}
+
+.name{
+    display: flex;
+    align-items: center;
+    height: 35px;
+    padding-top: 2px;
+}
+
+.name_input{
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    height: 25px;
+}
+
+input:focus {
+    border:solid 1px #EEA34A;
+}
+
+.course-btn-part {
+    margin-top: 17px;
+    display: flex;
+}
+
+.btn-square-pop {
+    width: 50px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding: 0.25em 0.5em;
+    margin-top: 3px;
+    text-decoration: none;
+    color: #FFF;
+    background: #fd9535;/*背景色*/
+    border-bottom: solid 2px #d27d00;/*少し濃い目の色に*/
+    border-radius: 4px;/*角の丸み*/
+    font-weight: bold;
+}
+  
+.btn-square-pop:active {
+    border-bottom: solid 2px #fd9535;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
+
+.course-content{
+    margin-left: 20px;
+}
+
+.course-title-part{
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: white;
+    color: #383737;
+    border-left: solid 6px #ff7c5c;/*左線*/
+    font-weight: bold;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.29);
+    width: 80%;
+    margin-top: 15px;
+}
+
+.course-title{
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.course-description{
+    display: flex;
+    align-items: flex-end;
+}
+
+.course-url{
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.course-list{
+    margin-top: 8px;
+    margin-left: 5px;
+}
+
+.list-item {
+    margin: 4px;
+}
+
+.cp_ipselect {
+	overflow: hidden;
+	width: 90%;
+	margin: 10px auto;
+}
+.cp_ipselect select {
+	width: 100%;
+	padding-right: 1em;
+	cursor: pointer;
+	text-indent: 0.01px;
+	text-overflow: ellipsis;
+	border: none;
+	outline: none;
+	background: transparent;
+	background-image: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+	appearance: none;
+}
+.cp_ipselect select::-ms-expand {
+    display: none;
+}
+.cp_ipselect.cp_sl02 {
+	position: relative;
+	border: 1px solid #bbbbbb;
+	border-radius: 2px;
+	background: #ffffff;
+}
+.cp_ipselect.cp_sl02::before {
+	position: absolute;
+	top: 0.8em;
+	right: 0.9em;
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #666666;
+	pointer-events: none;
+}
+.cp_ipselect.cp_sl02:after {
+	position: absolute;
+	top: 0;
+	right: 2.5em;
+	bottom: 0;
+	width: 1px;
+	content: '';
+	border-left: 1px solid #bbbbbb;
+}
+.cp_ipselect.cp_sl02 select {
+	padding: 8px 38px 8px 8px;
+	color: #666666;
+}
+
+.course-history-box {
+    margin-top: 20px;
+}
+
+.history-detail{
+    margin: 0 auto;
+    background: white;
+    color: #383737;
+    font-weight: bold;
+    width: 100%;
+    margin-top: 15px;
+    border: 2px solid #0000AA;
+}
+
+.item_line{
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+.history-table{
+    padding-left: 15px;
+    font-size: 12px;
+}
+
+.no{
+    width: 15%;
+}
+
+.course-name{
+    width: 60%;
+}
+
+.del_day{
+    width: 10%;
+    text-align: center;
+}
+
+.status{
+    width:15%;
+    text-align: center;
+
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オンライン学習管理ツール</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container"">
+        <div id="app">
+            <div class="title-wrap">
+                <div class="title">{{ name }}さんの学習履歴</div>
+            </div>
+
+            <div class="tabs">
+                <input id="all" type="radio" name="tab_item" checked>
+                <label class="tab_item" for="all" @click="get_selected_courses()">受講履歴</label>
+                <input id="programming" type="radio" name="tab_item">
+                <label class="tab_item" for="programming">設定</label>
+                <div class="tab_content" id="all_content">
+                  <div class="tab_content_description">
+                    <div class="course-history-box">
+                        <div class="cp_ipselect cp_sl02">
+                            <select v-model="selected" @change="select_course()">
+                                <option disabled value="">表示する講座を選択して下さい</option>
+                                <option v-for="item in selected_courses" v-bind:value="item['id']">
+                                    {{ get_course_title(item['service']) }} - {{ item['title'] }}
+                                </option>
+                            </select>
+                        </div>  
+                        <!-- 詳細　-->
+                        <div class="history-detail">
+                            <div class="history-table">
+                                <div class="item_line">
+                                    <div class="no">No.</div>
+                                    <div class="course-name">講座名</div>
+                                    <div class="del_day">配信日</div>
+                                    <div class="status">受講状況</div>
+                                </div>
+                                <div class="item_line" v-for="(obj, idx) in target_items">
+                                    <div class="no">{{ obj[2] }}</div>
+                                    <div class="course-name">{{obj[3]}}</div>
+                                    <div class="del_day" v-if="obj[4] === ''">--</div>
+                                    <div class="del_day" v-else>{{ obj[4] }}</div>
+                                    <div class="status" v-if="obj[5] === '0'">
+                                        <input type="checkbox" :id="obj['id']" :value="obj['id']" @change="change_log(obj,idx)">
+                                    </div>
+                                    <div class="status" style="color: red" v-else @click="change_log(obj,idx)">済</div>
+                                </div>
+                            </div>   
+                        </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="tab_content" id="programming_content">
+                  <div class="tab_content_description">
+                    <div class="setting-wrapper">
+                        <div class="name">
+                            <p>おなまえ：</p>
+                            <input class="name_input" v-model="name" placeholder="">
+                        </div>
+                        
+                        <div class="course-list">
+                            <div class="course-btn-part">
+                                以下のリストから受講している授業を選んでください。
+                            </div>
+                            <div class="course-content">
+                                <template v-for="service in courses['Services']">
+                                    <div class="course-title-part">
+                                        <div class="course-description">
+                                            <div class="course-title">{{ service['title'] }}</div>
+                                            <div class="course-url"><a :href="service['URL']">[link]</a></div>
+                                        </div>
+                                        
+                                        <div class="course-list">
+                                            <div class="list-item" v-for="course in courses['Courses']">
+                                                <template v-if="course['service'] === service['code']">
+                                                    <input type="checkbox" :id="course['id']" :value="course['id']" v-model="checked_items" @change="regist_list">
+                                                    <label class=for="course['id']"> {{ course['title']}} </label>
+                                                </template>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </template>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>                    
+                  </div>
+                    
+                </div>
+              </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>
+    <script src="js/datas.js" data-main="js/main"></script>
+    <script src="js/data_details.js" data-main="js/main"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
