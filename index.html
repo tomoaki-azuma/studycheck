@@ -16,7 +16,7 @@
 
             <div class="tabs">
                 <input id="all" type="radio" name="tab_item" checked>
-                <label class="tab_item" for="all" @click="get_selected_courses()">受講履歴</label>
+                <label class="tab_item" for="all" @click="get_selected_courses()"><p>受講履歴</p></label>
                 <input id="programming" type="radio" name="tab_item">
                 <label class="tab_item" for="programming">設定</label>
                 <div class="tab_content" id="all_content">
@@ -35,7 +35,7 @@
                             <div class="history-table">
                                 <div class="item_line">
                                     <div class="no">No.</div>
-                                    <div class="course-name">講座名</div>
+                                    <div class="course-name" style="text-align: center;">講座名</div>
                                     <div class="del_day">配信日</div>
                                     <div class="status">受講状況</div>
                                 </div>

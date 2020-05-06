@@ -1,7 +1,9 @@
 .container{
     width: 100%;
+    max-width: 450px;
     margin: 0 auto;
-    background-image: url(../img/p0307_m.jpeg);
+    /*background-image: url(../img/legal.png);*/
+    background-color: #FFFFDD;
     background-repeat: repeat-y;
     background-size: 100%;
     border-radius: 10px;
@@ -17,7 +19,7 @@
 .title{
     font-size: 20px;
     font-weight: border;
-    margin: 15px;
+    margin: 13px;
 }
 
 /*タブ切り替え全体のスタイル*/
@@ -38,8 +40,8 @@
   display: block;
   float: left;
   text-align: center;
-  font-weight: bold;
   padding-top: 5px;
+  background: rgba(255,255,255,0);
 }
 .tab_item:hover {
   opacity: 0.75;
@@ -67,16 +69,18 @@ input[name="tab_item"] {
 }
 
 /*選択されているタブのスタイルを変える*/
-.tabs input:checked + .tab_item {
-    background-color: rgba(255,255,0,1.0);
+.tabs input:checked + .tab_item{
+    background: rgba(255,255,255,0);
+    font-weight: bold;
+    text-decoration : underline;
 }
 
 .name{
     display: flex;
     align-items: center;
     height: 28px;
-    padding-top: 2px;
-    font-size: 13px;
+    padding-top: 5px;
+    font-size: 12px;
 }
 
 .name_input{
@@ -93,7 +97,7 @@ input:focus {
 .course-btn-part {
     margin-top: 8px;
     display: flex;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .btn-square-pop {
@@ -118,6 +122,7 @@ input:focus {
 
 .course-content{
     margin-left: 10px;
+    margin-bottom: 10px;
 }
 
 .course-title-part{
