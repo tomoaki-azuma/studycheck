@@ -1,5 +1,5 @@
 .container{
-    width: 600px;
+    width: 450px;
     margin: 0 auto;
     background-image: url(../img/p0307_m.jpeg);
     background-repeat: repeat-y;
@@ -15,9 +15,9 @@
 }
 
 .title{
-    font-size: 24px;
+    font-size: 20px;
     font-weight: border;
-    margin: 22px;
+    margin: 15px;
 }
 
 /*タブ切り替え全体のスタイル*/
@@ -32,14 +32,14 @@
 /*タブのスタイル*/
 .tab_item {
   width: calc(100%/2);
-  height: 24px;
-  font-size: 16px;
+  height: 18px;
+  font-size: 12px;
   text-align: center;
   display: block;
   float: left;
   text-align: center;
   font-weight: bold;
-  padding-top: 7px;
+  padding-top: 5px;
 }
 .tab_item:hover {
   opacity: 0.75;
@@ -53,7 +53,7 @@ input[name="tab_item"] {
 /*タブ切り替えの中身のスタイル*/
 .tab_content {
   display: none;
-  padding: 0px 40px 0;
+  padding: 0px 15px 0;
   clear: both;
   overflow: hidden;
 }
@@ -74,15 +74,16 @@ input[name="tab_item"] {
 .name{
     display: flex;
     align-items: center;
-    height: 35px;
+    height: 28px;
     padding-top: 2px;
+    font-size: 13px;
 }
 
 .name_input{
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    height: 25px;
+    height: 20px;
 }
 
 input:focus {
@@ -90,8 +91,9 @@ input:focus {
 }
 
 .course-btn-part {
-    margin-top: 17px;
+    margin-top: 8px;
     display: flex;
+    font-size: 13px;
 }
 
 .btn-square-pop {
@@ -115,7 +117,7 @@ input:focus {
 }
 
 .course-content{
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .course-title-part{
@@ -128,13 +130,13 @@ input:focus {
     font-weight: bold;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.29);
     width: 80%;
-    margin-top: 15px;
+    margin-top: 12px;
 }
 
 .course-title{
     margin-top: 5px;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 14px;
 }
 
 .course-description{
@@ -154,6 +156,7 @@ input:focus {
 
 .list-item {
     margin: 4px;
+    font-size: 12px;
 }
 
 .cp_ipselect {
@@ -173,7 +176,8 @@ input:focus {
 	background-image: none;
 	box-shadow: none;
 	-webkit-appearance: none;
-	appearance: none;
+    appearance: none;
+    font-size: 12px;
 }
 .cp_ipselect select::-ms-expand {
     display: none;
