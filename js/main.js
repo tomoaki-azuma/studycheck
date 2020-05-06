@@ -59,6 +59,9 @@ new Vue({
         },
         get_course_title: function(code) {
             return this.courses['Services'].filter(v => v['code'] === code)[0]['title']
+        },
+        regist_name: function() {
+            localStorage.setItem('name', this.name);
         }
     },
     created () {
