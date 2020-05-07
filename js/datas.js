@@ -1,4 +1,4 @@
-var courses_json = 
+var courses_json =
 {
 	"Courses": [
 		{
@@ -54,6 +54,60 @@ var courses_json =
 			"service": "ss",
             "cource": "5social-adv",
             "title": "五年社会応用"
+        },
+				{
+            "id": "13",
+						"service": "ss",
+            "cource": "math-basic1",
+            "title": "六年算数基礎（入門）"
+        },
+				{
+            "id": "14",
+						"service": "ss",
+            "cource": "math-basic2",
+            "title": "六年算数基礎"
+        },
+				{
+            "id": "15",
+						"service": "ss",
+            "cource": "math-adv",
+            "title": "六年算数応用"
+        },
+				{
+            "id": "16",
+						"service": "ss",
+            "cource": "lang-basic",
+            "title": "六年国語基礎"
+        },
+				{
+            "id": "17",
+						"service": "ss",
+            "cource": "lang-adv",
+            "title": "六年国語応用"
+        },
+				{
+            "id": "18",
+						"service": "ss",
+            "cource": "science-basic",
+            "title": "六年理科基礎"
+        },
+				{
+            "id": "19",
+						"service": "ss",
+            "cource": "science-adv",
+            "title": "六年理科応用"
+        },
+				{
+            "id": "20",
+						"service": "ss",
+            "cource": "society-basic",
+            "title": "六年社会基礎"
+        },
+				{
+            "id": "21",
+						"service": "ss",
+            "cource": "society-adv",
+            "title": "六年社会応用"
         },
         {
             "id": "10",

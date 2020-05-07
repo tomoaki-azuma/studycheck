@@ -250,7 +250,7 @@ input:focus {
 }
 
 .course-name{
-    width: 50%;
+    width: 55%;
 }
 
 .del_day{
@@ -259,7 +259,7 @@ input:focus {
 }
 
 .status{
-    width:20%;
+    width:15%;
     text-align: center;
 
 }
