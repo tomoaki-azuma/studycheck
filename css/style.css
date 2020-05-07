@@ -11,6 +11,10 @@
     color: #333333;
 }
 
+[v-cloak] {
+    display: none;
+}
+
 .title-wrap{
     display: flex;
     justify-content: center;

@@ -11,7 +11,7 @@
     <div class="container"">
         <div id="app">
             <div class="title-wrap">
-                <div class="title">{{ name }}さんの学習履歴</div>
+                <div class="title" v-cloak>{{ name }}さんの学習履歴</div>
             </div>
 
             <div class="tabs">
@@ -25,7 +25,7 @@
                         <div class="cp_ipselect cp_sl02">
                             <select v-model="selected" @change="select_course()">
                                 <option disabled value="">表示する講座を選択して下さい</option>
-                                <option v-for="item in selected_courses" v-bind:value="item['id']">
+                                <option v-for="item in selected_courses" v-bind:value="item['id']" v-cloak>
                                     {{ get_course_title(item['service']) }} - {{ item['title'] }}
                                 </option>
                             </select>
@@ -40,10 +40,10 @@
                                     <div class="status">受講<br>状況</div>
                                 </div>
                                 <div class="item_line" v-for="(obj, idx) in target_items">
-                                    <div class="no">{{ obj[2] }}</div>
-                                    <div class="course-name">{{obj[3]}}</div>
+                                    <div class="no" v-cloak>{{ obj[2] }}</div>
+                                    <div class="course-name" v-cloak>{{obj[3]}}</div>
                                     <div class="del_day" v-if="obj[4] === ''">--</div>
-                                    <div class="del_day" v-else>{{ obj[4] }}</div>
+                                    <div class="del_day" v-else v-cloak>{{ obj[4] }}</div>
                                     <div class="status" v-if="obj[5] === '0'">
                                         <input type="checkbox" :id="obj['id']" :value="obj['id']" @change="change_log(obj,idx)">
                                     </div>
@@ -71,7 +71,7 @@
                                 <template v-for="service in courses['Services']">
                                     <div class="course-title-part">
                                         <div class="course-description">
-                                            <div class="course-title">{{ service['title'] }}</div>
+                                            <div class="course-title" v-cloak>{{ service['title'] }}</div>
                                             <div class="course-url"><a :href="service['URL']">[link]</a></div>
                                         </div>
                                         
@@ -79,7 +79,7 @@
                                             <div class="list-item" v-for="course in courses['Courses']">
                                                 <template v-if="course['service'] === service['code']">
                                                     <input type="checkbox" :id="course['id']" :value="course['id']" v-model="checked_items" @change="regist_list">
-                                                    <label class=for="course['id']"> {{ course['title']}} </label>
+                                                    <label class=for="course['id']" v-cloak> {{ course['title']}} </label>
                                                 </template>
                                             </div>
                                         </div>
