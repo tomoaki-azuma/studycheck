@@ -37,7 +37,7 @@
 
 /*タブのスタイル*/
 .tab_item {
-  width: calc(100%/2);
+  width: calc(100%/3);
   height: 18px;
   font-size: 12px;
   text-align: center;
@@ -266,4 +266,64 @@ input:focus {
     width:15%;
     text-align: center;
 
+}
+
+#info {
+    background: #FFFFFF;
+    padding: 30px;
+    margin-top: 10px;
+}
+
+
+#info a {
+    display: block;
+    color: red;
+}
+
+.info-title{
+    font-size: 14px;
+    color: #222222;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.info-description {
+    font-size: 12px;
+    color:  #222222;
+    line-height: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.info-description h2{
+    font-weight: bold;
+    font-size: 14px;
+    color: red;
+    padding: 0.3em;/*文字周りの余白*/
+    color: #494949;/*文字色*/
+    background: #fffaf4;/*背景色*/
+    border-left: solid 5px #ffaf58;/*左線（実線 太さ 色）*/
+}
+
+.info-contents{
+    margin: 8px 3px;
+    font-size: 11px;
+}
+
+.info-contents p{
+    color: red;
+}
+
+.info-contents ul{
+    list-style-type: disc;
+  }
+
+.info-box{
+    display: flex;
+    justify-content: center;
+}
+
+.endbtn-box{
+    display: flex;
+    justify-content: center;
 }

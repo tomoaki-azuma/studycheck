@@ -77,3 +77,9 @@ new Vue({
 
 })
 
+
+$("#btn-dialog").on('click', function(){
+    console.log('hoge')
+    $('#result').removeClass('hidden');
+})
+

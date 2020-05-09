@@ -19,6 +19,8 @@
                 <label class="tab_item" for="all" @click="get_selected_courses()"><p>受講履歴</p></label>
                 <input id="programming" type="radio" name="tab_item">
                 <label class="tab_item" for="programming">設定</label>
+                <input id="design" type="radio" name="tab_item">
+                <label class="tab_item" for="design">ヘルプ</label>
                 <div class="tab_content" id="all_content">
                   <div class="tab_content_description">
                     <div class="course-history-box">
@@ -91,21 +93,56 @@
                         
                     </div>                    
                   </div>
-                    
+                </div>
+                <div class="tab_content" id="design_content">
+                    <div class="tab_content_description">
+                        <div id="info">
+                            <div class="info-description">
+                                <h2>このページについて</h2>
+                                <div class="info-contents">
+                                    元々は自身の子供のオンライン学習をサポートするために作ったページです。
+                                    同じような境遇の形にも利用してもらえるのではと思い、公開することとしました。スマホ閲覧を推奨します。
+                                </div>
+                                <h2>入力データについて</h2>
+                                <div class="info-contents">
+                                    <ul>
+                                        <li>ユーザー登録などは必要ありません。</li>
+                                        <li>入力データの処理は全て閲覧されている端末内で処理、保存されます。</li>
+                                        <li>サーバー側には一切データは送信されませんのでセキュリティの心配は低いですが、念のためユーザ名はニックネームなどを使った方が安心かと思います。</li>
+                                    </ul>
+                                    <p>※上記の理由からクラウドではないため、同じ端末の同じブラウザからアクセスしないと情報は保持されません。</p>
+                                </div>
+                                <h2>操作</h2>
+                                <div class="info-contents">
+                                    ①初期状態ではユーザ名も登録講座もないので「設定」から登録して下さい。保存動作は必要なく、文字入力、チェックボックス選択の時点で情報は保存されます。<br>
+                                    ②設定後、プルダウンメニューから講座を選択してください。<br>
+                                    ③受講した回の「受講状況」の欄のチェックボックスをクリック（タップ）すると「済」に変わります。間違えた場合は「済」をクリックしてください。
+                                </div>
+                                <h2>講座データについて</h2>
+                                <div class="info-contents">
+                                    <ul>
+                                        <li>講座データは2020年5月7日時点のデータで同期はしていませんので内容に相違が出る可能性があります。</li>
+                                        <li>現状データは我が家で必要な分＋α程度です。追加データを希望される方は下記contact宛ご連絡ください。ご要望が多ければ対応します。ただし情報はweb上での公開情報に限ります。</li>
+                                        <li>本アプリ内のデータの掲載に問題があればご連絡ください。ただしこれにより当方に利益は一切発生せず、業として行っているものでもありません。</li>
+                                    </ul>
+                                </div>
+                                <h2>contact</h2>
+                                <div class="info-contents">
+                                    以下twitterアカウントまで。DMでもどうぞ。<a href="https://twitter.com/TomoakiAzuma">ともろう</a>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
               </div>
+              
         </div>
-
-
-
-
-
-
-
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="js/datas.js" data-main="js/main"></script>
     <script src="js/data_details.js" data-main="js/main"></script>
     <script src="js/main.js"></script>
